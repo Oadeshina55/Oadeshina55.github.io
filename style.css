@@ -1,0 +1,26 @@
+h1 {
+    color: blueviolet;
+    text-align: center
+}
+h3 {
+    color: blue;
+    text-align: center
+}
+body {
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+label {
+    font-size: larger;
+    padding: 5px;
+    text-align: left;
+    font-weight: 200;
+    tab-size: 100px;
+}
+h1 {
+    font-family: 'Shizuru',cursive;
+    color: #ef5097;
+    font-size: 5vw;
+    background: linear-gradient(to top, #ffe138 50%, transparent 50%);
+}
