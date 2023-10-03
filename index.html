@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fault Log Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+    <img src="logo.png" alt="New Hampshire Capital">
+    </center>
+	<header>
+		<h1>Fault Log Form</h1>
+	</header>
+	<main>
+		<form action="process.form.php" method="post"
+            <label for="SR Number">SR:</label>
+            <input type="number" id="SR Number" name="SR" required><br><br>
+            <label for="Account Number">Account:</label>
+            <input type="number" id="Account Number" name="Account" required><br><br>
+			<label for="meter-number">Meter Number:</label>
+			<input type="text" id="meter-number" name="meter-number" required><br><br>
+            <label for="Available Credit">Available Credit (KWH):</label>
+            <input type="number" id="Available Credit" name="Available-Credit" required><br><br>
+			<label for="customer-name">Customer Name:</label>
+			<input type="text" id="customer-name" name="customer-name" required><br><br>
+			<label for="address">Address:</label>
+			<input type="text" id="address" name="address" required><br><br>
+			<label for="phone-number">Phone Number:</label>
+			<input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required><br><br>
+			<label for="date">Date of Retrieval:</label>
+			<input type="date" id="date" name="date" required><br><br>
+			<label for="time">Time of Retrieval:</label>
+			<input type="time" id="time" name="time" required><br><br>
+			<div>
+        <h4>Meter Defect:</h4>
+        <select id="fruit-dropdown">
+          <option value="apple">Burnt Internally</option>
+          <option value="banana">No Communication</option>
+          <option value="cherry">Rejecting Token</option>
+          <option value="date">Tamper</option>
+          <option value="grape">Bypassed</option>
+          <option value="kiwi">Burnt Terminal</option>
+          <option value="mango">Not supplying</option>
+          <option value="orange">Continious Tamper</option>
+          <option value="pear">Dead to Power</option>
+          <option value="strawberry">Blank Screen</option>
+          <option value="watermelon">Negative Balance</option>
+        </select>
+          <p>Defect: <span id="selected-fruit">No Option</span></p>
+
+    <script>
+        // JavaScript to handle the dropdown selection
+        const fruitDropdown = document.getElementById("fruit-dropdown");
+        const selectedFruit = document.getElementById("selected-fruit");
+
+        // Add an event listener to the dropdown to update the selected fruit
+        fruitDropdown.addEventListener("change", () => {
+            const selectedOption = fruitDropdown.options[fruitDropdown.selectedIndex];
+            selectedFruit.textContent = selectedOption.textContent;
+        });
+    </script>
+    
+      </div>
+        <br>
+      <div>
+      <label for="notes">Meter Defect:</label><br>
+			<textarea id="notes" name="notes" rows="5" cols="50"></textarea><br><br>
+      <div>
+            <h3>NHC Representatives:</h3>
+      <div>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required><br><br>
+      
+      <p>Signature:</p> <button> <a href="sig.html">Click Here</a></button>
+        </div>
+
+      </div>
+            <hr>
+            <button onclick="getLocation()">Get Location</button>
+            <p id="coordinates"></p>
+
+            <script>
+            function getLocation() {
+            if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+             } else {
+            alert("Geolocation is not supported by this browser.");
+            }
+            }
+
+            function showPosition(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            document.getElementById("coordinates").innerHTML =
+            "Latitude: " + latitude + "<br>Longitude: " + longitude;
+            }
+            </script>
+            <label for="file">Meter Nameplate:</label>
+            <input type="file" id="file" name="file"><br><br>
+
+            <label for="file">Location front view:</label>
+            <input type="file" id="file" name="file"><br><br>
+
+            <input type="submit" value="submit">
+		</form>
+	</main>
+</body>
+</html>
