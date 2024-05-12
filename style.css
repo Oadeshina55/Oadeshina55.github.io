@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    background-color: #28223F;
+    color: aliceblue;
+    font-family:  sans-serif;
+}
+section{
+    width: 32rem;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    box-shadow: 3px 5px 6px 0.2px yellow;
+
+}
+
+li{
+    list-style-type: none;
+}
+.personal{
+   background-color: lightseagreen;
+   padding: 2.5rem 0 1.5rem 0;
+}
+
+.personal .pro{
+    background-color: #FEBB0B;
+    color: #231E39;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    padding: 0.1rem 0.7rem ;
+    border: 1px solid #FEBB0B;
+    border-radius: 0.2rem;
+}
+
+.personal img{
+    height: 12rem;
+    width: 12rem;
+    display: block;
+    margin: auto;
+    border: 0.2rem solid blue;
+    border-radius: 50%;
+    
+}
+
+.personal .name {
+    padding: 0.4rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.personal .country {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0.2rem;
+    padding: 0.4rem;
+
+}.personal .stack {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+
+.personal button{
+    border: 1px solid #03BFCB;
+    padding: 0.8rem 1.8rem;
+    border-radius: 0.3rem;
+    font-size: 1.3rem;
+
+}
+.personal button:hover{
+cursor: pointer;
+}
+
+.personal button.primary{
+    background-color: lightcoral;
+    color: #231E39;
+    margin-right: 1rem;
+    border: 1px solid black;
+}
+
+.personal button.secondary{
+    /* background-color: transparent; */
+    color: red;
+    margin-left: 1rem;
+    border: 1px solid black;
+
+}
+
+.personal .buttons{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+
+.skills{
+    background-color: darkblue;
+    padding: 1.6rem 1rem;
+}
+
+
+.skills h2{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.skills ul li{
+    display: inline-block;
+    font-size: 1.2rem;
+    border: 1px solid yellow;
+    padding: 0.3rem;
+    margin : 0.3rem;
+    border-radius: 0.2rem;
+}
